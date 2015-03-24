@@ -1,3 +1,5 @@
+# Thread Pool: Core Size, Max Size and Work Queue
+
 Though in Java 6, 7 and 8, many new features have been imported into concurrency utils. Thread pool classes introduced by Java 5 are always most common used concurrency tools by Java programmers. It looks like easy to use them but master them is not an easy work. So today I will write something about how to use Java thread pools better.
 
 `ThreadPoolExecutor` has three, very important parameters: the number of core threads, the number of maximum threads and the work queue which type is `BlockingQueue`:
@@ -12,7 +14,7 @@ So a common mistake is to create a `ThreadPoolExecutor` with a small core pool s
 
 So the factory method `Executors.newFixedThreadPool(int nThreads)` will create a `ThreadPoolExecutor` instance whose the core size and maximum size are same, otherwise the maximum pool size is meaningless.
 
-# newFixedThreadPool
+## newFixedThreadPool
 The method `Executors.newFixedThreadPool(int nThreads)` will create a `ThreadPoolExecutor` like this:
 ```
 new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
@@ -20,7 +22,7 @@ new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new Linked
 
 The threads are bounded but the work queue is unbounded. So if the payloads are exceeded the process ability, the work queue will store more and more tasks. If this situation keeps all the time, the full work queue will cause memory problems. Even an empty task, if the number is up to 20 million, it still would use 1GB memory. So there is no server be able to store `Integer.MAX_VALUE` tasks, which is around 2 billion.
 
-# newCachedThreadPool
+## newCachedThreadPool
 The method `Executors.newCachedThreadPool` will create a `ThreadPoolExecutor` like this:
 ```
 new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>())
@@ -29,5 +31,5 @@ The core pool size of `ThreadPoolExecutor` can be set as 0. The `ThreadPoolExecu
 
 Its threads are unbounded but the work queue is bound (just a handoff queue.), so it will more dangerous if use it to handle a huge mount of tasks directly.
 
-# Quiz
+## Quiz
 * `new ThreadPoolExecutor(0, 10, new ArrayBlockingQueue(100))`
