@@ -54,51 +54,53 @@ public class FutureRenderer {
 
 为了解决这个问题，我们可以这样写
 
-	public void renderPage(CharSequence source) {
-        List<ImageInfo> imageInfos = scanForImageInfo(source);
+```java
+public void renderPage(CharSequence source) {
+    List<ImageInfo> imageInfos = scanForImageInfo(source);
 
-        Queue<Future<ImageData>> imageDownloadFutures = new LinkedList<Future<ImageData>>();
-        for (final ImageInfo imageInfo : imageInfos) {
-            Future<ImageData> future = executorService.submit(new Callable<ImageData>() {
-                @Override
-                public ImageData call() throws Exception {
-                    return imageInfo.downloadImage();
+    Queue<Future<ImageData>> imageDownloadFutures = new LinkedList<Future<ImageData>>();
+    for (final ImageInfo imageInfo : imageInfos) {
+        Future<ImageData> future = executorService.submit(new Callable<ImageData>() {
+            @Override
+            public ImageData call() throws Exception {
+                return imageInfo.downloadImage();
+            }
+        });
+        imageDownloadFutures.add(future);
+    }
+
+    renderText(source);
+
+    Future<ImageData> future;
+    while ((future = imageDownloadFutures.poll()) != null) {
+        if (future.isDone()) {
+            if (!future.isCancelled()) {
+                try {
+                    renderImage(future.get());
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    // We don't need the result, so cancel the task too
+                    future.cancel(true);
+                } catch (ExecutionException e) {
+                    System.out.println(e.getMessage());
+                    renderImage(ImageData.emptyImage());
                 }
-            });
+            }
+        } else {
             imageDownloadFutures.add(future);
         }
 
-        renderText(source);
-
-        Future<ImageData> future;
-        while ((future = imageDownloadFutures.poll()) != null) {
-            if (future.isDone()) {
-                if (!future.isCancelled()) {
-                    try {
-                        renderImage(future.get());
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                        // We don't need the result, so cancel the task too
-                        future.cancel(true);
-                    } catch (ExecutionException e) {
-                        System.out.println(e.getMessage());
-                        renderImage(ImageData.emptyImage());
-                    }
-                }
-            } else {
-                imageDownloadFutures.add(future);
-            }
-
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                System.out.println("Interrupt images download.");
-            }
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            System.out.println("Interrupt images download.");
         }
-
-        executorService.shutdownNow();
-        System.out.println("Finish the page render.");
     }
+
+    executorService.shutdownNow();
+    System.out.println("Finish the page render.");
+}
+```
 	
 这段代码是不是很长，其实我们不用这么辛苦，JDK 已经替我们考虑了这个问题。但是这个话题超出了本期范围，我会在接下来的文章里讲到如何更好地解决这个问题。
 
