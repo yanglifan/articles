@@ -12,38 +12,39 @@ Future 是 Java 5 JUC 包中的一个接口，主要提供了三类功能：
 # 通过代码看 Future 的使用
 我们先看一段代码，这个代码是《Java Concurrency in Practise》的 “Listing 6.13. Waiting for Image Download with Future.”。
 
-	<!-- lang: java -->
-	public class FutureRenderer {
-		private final ExecutorService executor = ...;
-		void renderPage(CharSequence source) {
-			final List<ImageInfo> imageInfos = scanForImageInfo(source);
-			Callable<List<ImageData>> task = new Callable<List<ImageData>>() {
-				public List<ImageData> call() {
-					List<ImageData> result = new ArrayList<ImageData>();
-					for (ImageInfo imageInfo : imageInfos)
-						result.add(imageInfo.downloadImage());
-					return result;
-				}
-			};
-			
-			Future<List<ImageData>> future = executor.submit(task);
-			
-			renderText(source);
-			
-			try {
-				List<ImageData> imageData = future.get();
-				for (ImageData data : imageData)
-					renderImage(data);
-			} catch (InterruptedException e) {
-				// Re-assert the thread's interrupted status
-				Thread.currentThread().interrupt();
-				// We don't need the result, so cancel the task too
-				future.cancel(true);
-			} catch (ExecutionException e) {
-				throw launderThrowable(e.getCause());
+```java
+public class FutureRenderer {
+	private final ExecutorService executor = ...;
+	void renderPage(CharSequence source) {
+		final List<ImageInfo> imageInfos = scanForImageInfo(source);
+		Callable<List<ImageData>> task = new Callable<List<ImageData>>() {
+			public List<ImageData> call() {
+				List<ImageData> result = new ArrayList<ImageData>();
+				for (ImageInfo imageInfo : imageInfos)
+					result.add(imageInfo.downloadImage());
+				return result;
 			}
+		};
+			
+		Future<List<ImageData>> future = executor.submit(task);
+		
+		renderText(source);
+		
+		try {
+			List<ImageData> imageData = future.get();
+			for (ImageData data : imageData)
+				renderImage(data);
+		} catch (InterruptedException e) {
+			// Re-assert the thread's interrupted status
+			Thread.currentThread().interrupt();
+			// We don't need the result, so cancel the task too
+			future.cancel(true);
+		} catch (ExecutionException e) {
+			throw launderThrowable(e.getCause());
 		}
 	}
+}
+```
 	
 这段代码模拟了一个 HTML 网页渲染的过程。整个渲染过程分成 HTML 文本的渲染和图片的下载及渲染。这段代码为了提高渲染效率，先提交图片的下载任务，然后在渲染文本，文本渲染完毕之后再去渲染图片。由于图片下载是 IO 密集操作，HTML 文本渲染是 CPU 密集操作，所以让两者并发运行可以提高效率。
 
