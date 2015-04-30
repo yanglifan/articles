@@ -13,9 +13,10 @@ volatile ¹Ø¼ü×Ö¿ÉÒÔ±£Ö¤¹¤×÷ÄÚ´æÖÐµÄ±äÁ¿ÔÚ±»¸³ÖµÖ®ºóÁ¢¼´Ð´ÈëÖ÷ÄÚ´æ£¬¶ÁÈ¡¹¤×÷ÄÚ´æÖ
 Ïß³ÌÐ­µ÷ wait, notify, notifyAll, await, signal
 
 # synchronized
-synchronized ¿é ÓÅÓÚ synchronized ·½·¨
-×¨ÓÃµÄ monitor ÓÅÓÚ this
-monitor Ó¦¸ÃÓÐÇåÎúµÄÃû³Æ£¬±íÃ÷ËøµÄÄ¿µÄ
+
+* synchronized ¿é ÓÅÓÚ synchronized ·½·¨
+* ×¨ÓÃµÄ monitor ÓÅÓÚ this
+* monitor Ó¦¸ÃÓÐÇåÎúµÄÃû³Æ£¬±íÃ÷ËøµÄÄ¿µÄ
 
 AutowiredFieldElement.inject
 
@@ -40,7 +41,20 @@ ConcurrentHashMap ¾Í²ÉÓÃÁË·Ö¶ÎËøµÄË¼Ïë¡£Èç¹ûÎÒÃÇµÄ¹¦ÄÜÐèÒª±£Ö¤Ò»×é¿ÉÓÉÒ»¸ö key Ê
 ÔÚÒ»¸öµ¥»úÓ¦ÓÃÖÐ£¬ÎÒÃÇ¿ÉÒÔÍ¨¹ý±à³ÌÓïÑÔ²ãÃæµÄËøÈ¥Í¬²½Ïß³Ì£¬±£Ö¤Êý¾ÝµÄÇ¿Ò»ÖÂÐÔ£¬»ò³Æ±£Ö¤²Ù×÷µÄÔ­×ÓÐÔ¡£µ«ÊÇ¶ÔÓÚ·Ö²¼Ê½Ó¦ÓÃÀ´Ëµ£¬±à³ÌÓïÑÔ²ãÃæµÄËøÎÞ·¨±£Ö¤Ó¦ÓÃÊý¾ÝµÄÇ¿Ò»ÖÂÐÔ¡£Èç¹ûÐèÒª£¬±ØÐë¿¼ÂÇ»ùÓÚÀýÈç Apache Zookeeper ÕâÑùµÄÓ¦ÓÃÊµÏÖ·Ö²¼Ê½Ëø¡£
 
 # Ò»ÖÂÐÔ£ºÇ¿Ò»ÖÂÐÔ¡¢×îÖÕÒ»ÖÂÐÔºÍ·Ö²¼Ê½Ò»ÖÂÐÔ
-Ç¿Ò»ÖÂÐÔÔÚ¶àÊýÇé¿öÏÂ£¬¼´±ãÊÇµ¥»úÓ¦ÓÃ£¬ÍùÍùÒ²ÊÇÄÑÒÔÊµÏÖµÄ¡£·Ö²¼Ê½ËøËäÈ»ÄÜÊµÏÖ·Ö²¼Ê½ÏµÍ³µÄÇ¿Ò»ÖÂÐÔ£¬µ«ÊÇ´ú¼Û¹ý´ó£¬ÔÚ¶àÊýµÄ²Ù×÷ÖÐ²»»áÊ¹ÓÃ¡£ËùÒÔ£¬ÏÖÔÚµÄ·þÎñÆ÷¶ËÓ¦ÓÃ¶àÊý±£Ö¤µÄÊÇ×îÖÕÒ»ÖÂÐÔºÍ¾Ö²¿µÄÇ¿Ò»ÖÂÐÔ¡£ÔÚ·Ö²¼Ê½ÏµÍ³ÖÐ£¬»¹ÓÐÒ»¸ö¸üÂé·³µÄ·Ö²¼Ê½Ò»ÖÂÐÔÎÊÌâ¡£½â¾öÕâÀàÎÊÌâ¾ÍÐèÒªÀýÈç PAXOS ÕâÑùµÄ·Ö²¼Ê½Ò»ÖÂÐÔËã·¨½â¾ö¡£
+Ç¿Ò»ÖÂÐÔÔÚ¶àÊýÇé¿öÏÂ£¬¼´±ãÊÇµ¥»úÓ¦ÓÃ£¬ÍùÍùÒ²ÊÇÄÑÒÔÊµÏÖµÄ¡£·Ö²¼Ê½ËøËäÈ»ÄÜÊµÏÖ·Ö²¼Ê½ÏµÍ³µÄÇ¿Ò»ÖÂÐÔ£¬µ«ÊÇ´ú¼Û¹ý´ó£¬ÔÚ¶àÊýµÄ²Ù×÷ÖÐ²»»áÊ¹ÓÃ¡£ËùÒÔ£¬ÏÖÔÚµÄ·þÎñÆ÷¶ËÓ¦ÓÃ¶àÊý±£Ö¤µÄÊÇ×îÖÕÒ»ÖÂÐÔ¡£ÔÚ·Ö²¼Ê½ÏµÍ³ÖÐ£¬»¹ÓÐÒ»¸ö¸üÂé·³µÄ·Ö²¼Ê½Ò»ÖÂÐÔÎÊÌâ¡£½â¾öÕâÀàÎÊÌâ¾ÍÐèÒªÀýÈç PAXOS ÕâÑùµÄ·Ö²¼Ê½Ò»ÖÂÐÔËã·¨½â¾ö¡£
+
+## Ò»ÖÂÐÔÀý×Ó
+
+1. ´ÓAÕÊºÅÖÐ°ÑÓà¶î¶Á³öÀ´¡£
+1. ¶ÔAÕÊºÅ×ö¼õ·¨²Ù×÷¡£
+1. °Ñ½á¹ûÐ´»ØAÕÊºÅÖÐ¡£
+1. ´ÓBÕÊºÅÖÐ°ÑÓà¶î¶Á³öÀ´¡£
+1. ¶ÔBÕÊºÅ×ö¼Ó·¨²Ù×÷¡£
+1. °Ñ½á¹ûÐ´»ØBÕÊºÅÖÐ¡£
+
+Èç¹û·Ö²¼Ê½´æ´¢£¬ÐèÒªËø×¡AËùÔÚµÄÊý¾ÝºÍBËùÔÚµÄÊý¾Ý¡£Èç¹ûÊÇÓÐÊý¾Ý¾µÏñ£¬ÐèÒª±£Ö¤¶à·ÝÊý¾ÝµÄÒ»ÖÂÐÔ¡£Ç°ÕßÐèÒª·Ö²¼Ê½ÊÂÎñ»ò·Ö²¼Ê½Ëø¡£ºóÕßÐèÒªÊµÏÖ·Ö²¼Ê½Ò»ÖÂÐÔ¡£
+
+Ð¡·¶Î§·Ö²¼Ê½Ò»ÖÂÐÔ£¬×ÜÌåÉÏÍ¨¹ýÏûÏ¢¶ÓÁÐ¼ÇÂ¼²Ù×÷ÈÕÖ¾ÊµÏÖ×îÖÕÒ»ÖÂÐÔ¡£
 
 # ·Ö±ðÓÃsynchronizedºÍlockÊµÏÖÉú²úÕßÏû·ÑÕß
 
