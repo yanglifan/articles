@@ -1,5 +1,7 @@
 # ·Ö²¼Ê½ÏµÍ³¼¼Êõ¸ÅÒª
-## ·Ö²¼Ê½ÏµÍ³Ö®ÍøÂç
+## ·Ö²¼Ê½ÏµÍ³Ö®ÅäÖÃ¹ÜÀí
+ÔÚ·Ö²¼Ê½¼¯ÈºÖÐ£¬ÈçºÎÈÃÃ¿Ò»¸ö½ÚµãÁË½â½ÚµãµÄ×´Ì¬¡¢ÁË½âÆäËùÒÔÀ´µÄ·þÎñµÄµØÖ·µÈÐÅÏ¢¡¢Ð­µ÷¼¯Èº¼äµÄÐ­×÷£¬µÈµÈÕâÐ©ÊÂÇé¶ÔÓÚÕû¸ö¼¯ÈºµÄÕý³£¹¤×÷ÖÁ¹ØÖØÒª¡£ËùÒÔÕâ±ãÊÇ Apache Zookeeper Ö®ÀàµÄÈí¼þµÄÓÃÎäÖ®µØ¡£
+
 ### Apache Zookeeper
 Zookeeper ÊÇÒ»¸ö·Ö²¼Ê½µÄ·þÎñ¹ÜÀí¿ò¼Ü¡£Zookeeper µÄµäÐÍµÄÓ¦ÓÃ³¡¾°°üÀ¨ÅäÖÃÎÄ¼þµÄ¹ÜÀí¡¢¼¯Èº¹ÜÀí¡¢·Ö²¼Ê½Ëø¡¢Leader Ñ¡¾Ù¡¢¶ÓÁÐ¹ÜÀíµÈ¡£Zookeeper ¿É¹¤×÷ÔÚ¼¯ÈºÄ£Ê½ÏÂ£¬`zoo.cfg` ÖÐ¼ÇÂ¼×Å¼¯ÈºÖÐËùÓÐ Zookeeper ·þÎñÆ÷µÄµØÖ·£¬Ã¿¸ö·þÎñÆ÷ÓÐ×Ô¼ºÎ¨Ò»µÄ ID¡£Í¬Ê±£¬Ã¿¸ö·þÎñÆ÷ÔÚ×Ô¼ºµÄ `dataDir` Ä¿Â¼ÏÂ»¹ÒªÓÐÒ»¸ö `myid` ÎÄ¼þ£¬ÒÔ±êÊ¾×Ô¼ºµÄ ID¡£
 
@@ -37,16 +39,24 @@ Hazelcast ÊÇÒ»¸öÃæÏò Java µÄ·Ö²¼Ê½ÄÚ´æ½â¾ö·½°¸£¬Ìá¹©ÁË·á¸»µÄ¹¦ÄÜÌØÐÔ¡£ÊµÏÖÁËÖîÈç
 Memcached ÊÇÀÏÅÆµÄ¡°·Ö²¼Ê½¡±»º´æ½â¾ö·½°¸¡£·Ö²¼Ê½Ö®ËùÒÔ¼ÓÒýºÅ£¬ÊÇÒòÎª Memcached ·þÎñÆ÷¶Ë±¾Éí²¢²»Ö§³Ö·Ö²¼Ê½£¬·þÎñÆ÷¶ËÃ¿¸ö½ÚµãÖ®¼ä²¢²»»áÏà»¥Í¨ÐÅ¡£·Ö²¼Ê½µÄÖ§³ÖÐèÒª¿Í»§¶ËÀ´ÊµÏÖ¡£ÔçÆÚµÄÄÚ´æ·Ö²¼Ê½ÊÇÍ¨¹ý½ÚµãÖ®¼ä¸´ÖÆÀ´ÊµÏÖµÄ£¬µ«ÕâÖÖ·½Ê½È´ÏÞÖÆÁË¿ÉÉìËõÐÔ¡£ÕâÒ²ÊÇÒòÎªÖîÈç Terrecotta ÕâÑùµÄÄÚ´æ·Ö²¼Ê½½â¾ö·½°¸Ã»ÓÐ³ÉÎªÖ÷Á÷µÄÔ­Òò¡£
 
 ## ·Ö²¼Ê½´æ´¢Ö®Êý¾Ý¿â
+### Êý¾Ý¿âÖÐ¼ä¼þ
 ÔÚ»¥ÁªÍø´óÐÐÆäµÀÖ®Ç°£¬Êý¾Ý¿â¶¼ÊÇµ¥»úµÄ£¬¼´±ãÖ§³Ö¼¯Èº£¬¹æÄ£Ò²ÊÇÓÐÏÞµÄ£¬±ÈÈç MySQL µÄ NDB Cluster ÒýÇæ¡£ÔÚ»¥ÁªÍø¹æÄ£»¹²»´óµÄÊ±ºò£¬Êý¾Ý¿â£¨ÕâÀïÍùÍùÖ¸ SQL Êý¾Ý¿â£©×Ô´øµÄ¼¯Èº½â¾ö·½°¸£¬½áºÏ¶ÁÐ´·ÖÀëµÄÄ£Ê½£¬»¹ÊÇ¿ÉÒÔÂú×ãÐèÒª¡£µ«ÊÇºÜ¿ìËæ×Å»¥ÁªÍøÓ¦ÓÃ¹æÄ£µÄ¿ìËÙÔö´ó£¬¶Ì¶Ì¼¸ÄêÊ±¼ä£¬ÍøÕ¾µÄÊý¾Ý¿â¾Í±ØÐë·Ö¿â·Ö±íÁË¡£Õâ¸öÊ±ºòµ¥µ¥¿¿Êý¾Ý¿â±¾Éí¾ÍÃ»ÓÐ°ì·¨½â¾ö¼¯Èº»¯Ö®ºóËù²úÉúµÄÎÊÌâÁË¡£Í¬Ê±£¬¸÷ÖÖ NoSQL Êý¾Ý¿âËäÈ»ÊÇÎªÁË»¥ÁªÍø¶øÉú£¬µ«Õâ²¢²»ÒâÎ¶ËûÃÇÌìÉú¾ÍÖ§³Ö¼¯Èº»¯¡£ÀýÈç Redis ´Ó×î½üµÄ 3.0 ¿ªÊ¼²ÅÌá¹©ÁË×Ô¼ºµÄ¼¯Èº·½°¸¡£
 
 ¶ÔÓÚ´ó¹æÄ£µÄÊý¾Ý¿â·Ö²¼Ê½½â¾ö·½°¸£¬µ¥¿¿Êý¾Ý¿â±¾ÉíÊÇ²»ÄÜÊµÏÖµÄ¡£±ØÐëÒýÈëÊý¾Ý·ÃÎÊÖÐ¼ä²ãÀ´½â¾öÊý¾Ý¿â·Ö²¼Ê½µÄÎÊÌâ¡£ÔÚÕâ¸öÁìÓò£¬¸÷¸ö»¥ÁªÍø³§ÉÌ¶¼ÓÐ×Ô¼ºµÄ½â¾ö·½°¸¡£ÕâÐ©½â¾ö·½°¸£¬°´ÕÕÊ¹ÓÃ·½Ê½¿ÉÒÔ·ÖÎªÌá¹© REST API¡¢±à³ÌÓïÑÔÊý¾Ý¿âÇý¶¯·½Ê½£¨ÀýÈç JDBC£©¡¢ORM ¿ò¼Ü·½Ê½¡¢Êý¾Ý¿â½Ó¿ÚÐ­ÒéÍ¨ÐÅ·½Ê½¡£ÆäÖÐ×îºóÒ»ÖÖÍ¨ÓÃÐÔ×î¸ß£¬µ«ÊÇ¿ª·¢ÄÑ¶ÈÒ²×î´ó¡£±à³ÌÓïÑÔÊý¾Ý¿âÇý¶¯µÄ·½Ê½¶ÔÌØ¶¨µÄ±à³ÌÓïÑÔ×îºÃÓÃ£¬µ«ÊÇÍ¨ÓÃÐÔ²î¡£
 
 ÔÚÕâ¸öÁìÓò£¬Ä¿Ç°¿ªÔ´µÄÏîÄ¿²»ÊÇºÜ¶à¡£Ö®Ç°°¢Àï¿ªÔ´µÄ Cobar ÏÖÔÚÒÑ¾­×ªÎª±ÕÔ´¡£ÏÖÔÚ¹úÄÚ¿ªÔ´ÉçÇøÔÚ [Cobar](http://luruoyu.blog.51cto.com/2876338/929653) µÄ»ù´¡Ö®ÉÏ·¢ÆðÁËÒ»¸ö MyCAT µÄÏîÄ¿£¬Ä¿µÄÊÇÌá¹©Ò»¸ö¸üºÃµÄ¿ªÔ´·Ö²¼Ê½Êý¾Ý¿â·ÃÎÊÖÐ¼ä²ã¡£
 
+### NoSQL
+Ê×ÏÈ±ØÐëËµÃ÷µÄÊÇ NoSQL ²¢²»´ú±í×Å·Ö²¼Ê½£¬ËùÒÔ NoSQL 
+
+reddis Ò»ÖÂÐÔ»ªÎ÷
+
 ## ·Ö²¼Ê½ÏµÍ³Ö®Ô¶³Ìµ÷ÓÃ
 ·Ö²¼Ê½ÏµÍ³ÖÐ£¬×é¼þµÄÏà»¥µ÷ÓÃ±ØÐëÍ¨¹ýÔ¶³Ìµ÷ÓÃÀ´ÊµÏÖ¡£REST API ºÍÏûÏ¢¶ÓÁÐ¹ãÒåÉÏÒ²ËãÊÇÔ¶³Ìµ÷ÓÃ£¬µ«Ç°ÕßÍ¨³£ÓÃ×÷¹«¿ªµÄ API »òÕß´óÐÍ·þÎñ¼äµÄµ÷ÓÃ¡£¶ÔÓÚ·þÎñÄÚ²¿Ö®¼äµÄ¸ü¼ÓÏ¸Á£¶ÈµÄ¡¢Æµ·±µÄÔ¶³Ìµ÷ÓÃ£¬REST API ¾ÍÏÔµÃÐÔÄÜ²»×ã¡£ÕâÖ÷ÒªÊÇÒòÎªÐ­Òé·½ÃæµÄÏÞÖÆ¡£ÏûÏ¢¶ÓÁÐÔò¶îÍâµØÆðµ½ÁËÒì²½ºÍÏ÷·åµÄ×÷ÓÃ¡£ËùÒÔÎÒÃÇÕâÀï²àÖØËµÒ»ÏÂ·Ç WebService ºÍÏûÏ¢¶ÓÁÐµÄÔ¶³Ìµ÷ÓÃ¡£
 
 Ô¶³Ìµ÷ÓÃµÄ±¾ÉíÓÐÁ½¸öÖØÒªµÄ¼¼Êõµã£¬Ò»¸öÊÇ IO ¼¼Êõ¡¢Ò»¸öÊÇÐòÁÐ»¯¼¼Êõ¡£ÁíÍâ£¬µ±×é¼þ¼äµÄµ÷ÓÃ±ä³ÉÔ¶³Ìµ÷ÓÃÖ®ºóËùÒýÈëµÄ·þÎñ×¢²á¡¢·¢ÏÖ¡¢Â·ÓÉµÄÎÊÌâ£¬Õâ¸öÎÊÌâ¿ÉÒÔ¼ò³ÆÎª·þÎñµÄÖÎÀí¡£
+
+Ô¶³Ìµ÷ÓÃºÁÎÞÒÉÎÊ»á±È±¾µØµ÷ÓÃÒª¸´ÔÓÐí¶à£¬ËùÒÔÈçºÎÌá¸ßÔ¶³Ìµ÷ÓÃµÄÒ×ÓÃÐÔÒ²ÊÇÔÚÊµ¼Ê¿ª·¢ÖÐÊ¹ÓÃÔ¶³Ìµ÷ÓÃÊÇÐèÒª¿¼ÂÇµÄÒ»¸öÖØÒªÎÊÌâ¡£
 
 ### IO
 IO ¿É¼òµ¥·ÖÎª×èÈûIOÓë·Ç×èÈûIO¡¢Í¬²½IOÓëÒì²½IO ËÄÖÖÄ£ÐÍ¡£×èÈû IO Ä£ÐÍÖµµÃÊÇ IO ²Ù×÷»á×èÈû·¢Æð IO µÄ½ø³Ì»òÕßÏß³Ì£»·Ç×èÈû IO µÄÒ»¸öÊµÏÖ·½Ê½ Reactor Ä£ÐÍ£¬¼´ÔÚÏß³ÌÄ£ÐÍÉÏ£¬·Ö³ö·ÖÅä IO ÈÎÎñµÄ Boss Ïß³ÌºÍÖ´ÐÐ IO ²Ù×÷µÄ Worker Ïß³Ì¡£·Ç×èÈû IO Óë ×èÈû IO Ïà±È£¬½ø²½µÄµØ·½ÔÚÓÚ·Ç×èÈû IO Ä£ÐÍÖÐµÄ Worker Ïß³ÌÔÚ IO ²Ù×÷Ã»ÓÐ ready µÄÇé¿öÏÂ²»»á±»×èÈû¡£Ö»ÓÐµ±¶Á»òÐ´µÄ²Ù×÷ ready Ö®ºó£¬Worker Ïß³Ì²Å»áÖ´ÐÐÈÎÎñ£¬¶ø²»»áÎÞ¹ÊµÄ×èÈû¡£
@@ -78,19 +88,31 @@ Apache Avro ÊÇ Apache Hadoop µÄÒ»¸ö×ÓÏîÄ¿¡£ËüÌá¹©ÁËÁ½ÖÖÐòÁÐ»¯¸ñÊ½£ºJSONºÍ¶þ½øÖÆ¸
 * [ÐòÁÐ»¯ºÍ·´ÐòÁÐ»¯](http://www.infoq.com/cn/articles/serialization-and-deserialization)
 
 ## ·Ö²¼Ê½ÏµÍ³Ö®ÏûÏ¢ÖÐ¼ä¼þ
-ÔÚ·Ö²¼Ê½ÏµÍ³ÖÐ£¬ÏûÏ¢ÖÐ¼ä¼þµÄÖØÒªÐÔÔ½À´Ô½Ã÷ÏÔ¡£ÏûÏ¢ÖÐ¼ä¼þ¿ÉÒÔ½âñîÄ£¿é¡¢Ìá¹©Òì²½µ÷ÓÃ¹¦ÄÜ¡¢ÏûÏ¢³Ö¾Ã»¯¡¢ÏûÏ¢Ï÷·å¡£ÕâÐ©¹¦ÄÜ¶Ô Java EE ÁìÓò×îÖøÃûµÄ JMS µÄÊµÏÖ ActiveMQ ÏÖÔÚÒÑ¾­ÎÞ·¨Âú×ã»¥ÁªÍøÓ¦ÓÃµÄÐÔÄÜÐèÒªÁË¡£µ«ÊÇÁíÒ»·½Ãæ£¬¡£ËùÒÔËæºó³öÏÖµÄ RabbitMQ¡¢LinkedIn ´´½¨µÄ Apache Kafka Ìá¹©ÁË¸üºÃµÄÐÔÄÜºÍ¸üÄÜÂú×ã´ó¹æÄ£·Ö²¼Ê½Ó¦ÓÃµÄÌØÐÔ¡£
+ÔÚ·Ö²¼Ê½ÏµÍ³ÖÐ£¬ÏûÏ¢ÖÐ¼ä¼þµÄÖØÒªÐÔÔ½À´Ô½Ã÷ÏÔ¡£ÏûÏ¢ÖÐ¼ä¼þ¿ÉÒÔ½âñîÄ£¿é¡¢Ìá¹©Òì²½µ÷ÓÃ¹¦ÄÜ¡¢ÏûÏ¢³Ö¾Ã»¯¡¢ÏûÏ¢Ï÷·å¡£ÒÑÓÐµÄÈç Apache ActiveMQ ÎÞ·¨Âú×ãÐÂµÄÐèÒª£¬ÓÚÊÇ³öÏÖÁËÈç RabbitMQ¡¢Apache Kafka µÈÐÂÐÍµÄÏûÏ¢ÖÐ¼ä¼þ²úÆ·¡£
 
 ### Apache Kafka
 Apache Kafka ³ä·ÖÀûÓÃÁË»úÐµ´ÅÅÌË³Ðò¶ÁÐ´ËÙ¶È¿ìµÄÌØµã£¬ÔÚ½ÓÊÜÏûÏ¢Ö®ºóÍ¬²½µØÐ´Èëµ½´ÅÅÌÖÐ£¬±£Ö¤Êý¾Ý¿É¿¿ÐÔµÄÍ¬Ê±£¬Ò²±£Ö¤ÁË·Ç³£¿ìµÄËÙ¶È¡£Ã¿¸ö Kafka ¼¯ÈºÉÏ¶¼ÓÐ¶à¸ö Topic£¬Topic Ïàµ±ÓÚÒ»¸ö category£¬Ïû·ÑÕß¿ÉÒÔ¶©ÔÄÒ»¸ö»ò¶à¸ö Topic¡£Ã¿¸ö Topic ÓÉ¶à¸ö Partition ×é³É¡£ÏûÏ¢±»Ë³ÐòµÄÌí¼Óµ½ Partition ÖÐ£¬Ã¿ÌõÏûÏ¢ÓÐÒ»¸öÎ¨Ò»µÄ¡¢ÓÐÐòµÄ ID£¬Õâ¸ö ID ±»³ÆÎª Offset¡£Consumer ÐèÒªÎ¬»¤×Ô¼ºÏû·Ñµ½µÄÏûÏ¢µÄÎ»ÖÃ (Offset)¡£
 
+Apache Kafka ²»Í¬ÓÚ´«Í³µÄÏûÏ¢ÖÐ¼ä¼þ£¬Ëü²ÉÓÃ¡°À­¡±ÏûÏ¢Ä£Ê½£¬¶ø²»ÊÇ´«Í³µÄ¡°ÍÆ¡±ÏûÏ¢Ä£Ê½¡£¼´¿Í»§¶ËÐèÒªÖ÷¶¯´ÓÏûÏ¢ÖÐ¼ä¼þ»ñÈ¡ÏûÏ¢£¬ºÃ´¦ÊÇ¿Í»§¶Ë¿ÉÒÔ¸üºÃµØ¿ØÖÆÇëÇóÁ¿¡£
+
 #### Queue Ä£Ê½ºÍ Topic Ä£Ê½
 ´«Í³ÏûÏ¢¶ÓÁÐ·þÎñÖÐÓÐ¶ÓÁÐÄ£Ê½ºÍ·¢²¼¶©ÔÄÄ£Ê½Á½ÖÖÄ£Ê½£¬Ç°ÕßÒ»ÌõÏûÏ¢Ö»»á±»Ò»¸öÏû·ÑÕßÏû·Ñ£»ºóÕßÒ»ÌõÏûÏ¢»á·¢²¼¸øËùÓÐµÄ¶©ÔÄÕâ¸ö Topic µÄÏû·ÑÕß¡£ÔÚ Kafka ÖÐ£¬ÕâÁ½ÖÖÄ£Ê½ÊÇÊ¹ÓÃÒ»ÖÖ·½Ê½ ¡ª¡ª Ïû·ÑÕß×éÀ´ÊµÏÖµÄ¡£ÔÚÍ¬Ò»¸öÏû·ÑÕß×éÖÐµÄ²»Í¬Ïû·ÑÕß²»»áÊÜµ½ÏàÍ¬µÄÏûÏ¢¡£Èç¹ûÏëÊµÏÖ·¢²¼¶©ÔÄÄ£Ê½£¬Ïû·ÑÕß±ØÐë´¦ÓÚ²»Í¬µÄÏû·ÑÕß×éÖÐ¡£
 
+### [RabbitMQ](https://www.rabbitmq.com/tutorials/tutorial-one-java.html)
+RabbitMQ ÊÇÒ»¸öÊ¹ÓÃ Erlang ¿ª·¢µÄ AMQP (Advanced Message Queue Protocol) ÊµÏÖ¡£ÏÖÔÚ RabbitMQ ÊÇÓÉ VMware ÆìÏÂµÄ SpringSource ¸ºÔð¿ª·¢¡£AMQP ÊÇÒ»¸öÓïÑÔÎÞ¹ØµÄÏûÏ¢¶ÓÁÐÐ­Òé¡£ÔÚ RabbitMQ ÖÐ£¬ÓÐÈý¸ö¸ÅÄî£ºExchange¡¢Queue ºÍ Route key¡£Exchange ÓÃÀ´±êÊ¾Éú²úÕß£¬Queue ÓÃÀ´±êÊ¾Ïû·ÑÕß£¬¶ø Route key ÓÃÀ´¹ØÁªÕâÁ½Õß¡£RabbitMQ ÖÐÕâÖÖ·½Ê½Ìá¹©ÁË¸üÁé»îµÄÓ¦ÓÃÄ£Ê½¡£
+
 ## ·Ö²¼Ê½ÏµÍ³Ö®ÐéÄâ»¯¼¼Êõ
+ÐéÄâ»¯¼¼ÊõÊÇÌá¸ßÓ²¼þÀûÓÃÂÊµÄÖØÒªÊÖ¶Î¡£ÐéÄâ»¯¼¼ÊõÊÇÊµÏÖÔÆ¼ÆËãµÄÖØÒª¼¼Êõ¡£ÐéÄâ»¯¼¼ÊõµÄ×îµ×²ãÊÇ¸÷ÖÖÓ²¼þµÄÐéÄâ»¯£¬Èç CPU ÐéÄâ»¯¡¢ÄÚ´æÐéÄâ»¯¡¢´æ´¢ÐéÄâ»¯¡¢ÍøÂçÐéÄâ»¯µÈµÈ¡£È»ºóÔÙ»ùÓÚÕâÐ©¼¼Êõ£¬¹¹½¨³ö¸÷ÖÖÐéÄâ»ú¼¼Êõ¡£È»ºó¸÷¸ö³§ÉÌÓÖ»ùÓÚÐéÄâ»ú¼¼ÊõºÍÆäËüÐéÄâ»¯¼¼Êõ¹¹½¨³ö IaaS¡¢PaaS ºÍ SaaS µÈÆ½Ì¨ºÍÈí¼þ²úÆ·¡£
+
 ### OpenStack
+OpenStack Õâ¸ö¿ªÔ´ÏîÄ¿°üº¬ÁËÒ»ÏµÁÐÓÃÓÚ IaaS Æ½Ì¨´î½¨µÄ×é¼þµÄºÏ³Æ¡£ÕâÐ©×é¼þ°üº¬ÓÃÓÚÍøÂçÐéÄâ»¯µÄ Neutron¡¢Ìá¹©´æ´¢ÐéÄâ»¯µÄ Ceph ºÍ Swift¡¢ÒÔ¼°Ìá¹©ÀýÈç¾µÏñ¹ÜÀí¡¢¿ØÖÆÃæ°åµÈ¹¦ÄÜµÄÖî¶à×é¼þ¡£OpenStack ±¾Éí²¢²»Ìá¹©ÐéÄâ»¯¼¼Êõ£¬¶øÊÇÍ¨¹ýÖ§³ÖÖî¶àÏÖÓÐµÄÐéÄâ»¯¼¼Êõ£¬ÀýÈç KVM£¬²¢ÔÚ´ËÖ®ÉÏÌá¹©Ò»ÏµÁÐ¹¹½¨ IaaS ½â¾ö·½°¸µÄ¼¼Êõ¡£OpenStack ÖÐµÄ×é¼þ¿ÉÒÔÁé»î´îÅäÊ¹ÓÃ£¬²¢ÇÒÒòÎª¿ªÔ´µÄÔ­Òò£¬Ê¹ÓÃÕß¿ÉÒÔ¶ÔÆä½øÐÐ×Ô¶¨Òå»ò¶þ´Î¿ª·¢¡£µ«ÊÇÒ²ÊÇÒòÎªÕâ¸öÔ­Òò£¬ÈÎºÎ³§ÉÌÏëÒª³É¹¦Ê¹ÓÃ OpenStack ±ØÐëÓÐÒ»¸öÇ¿´óµÄ¼¼ÊõÍÅ¶Ó×öºó¶Ü¡£ÕâÒ²ÊÇÄ¿Ç° OpenStack ¼¼Êõ·¢Õ¹Óöµ½µÄ×î´óÀ§ÄÑ¡£
 
 ### Docker
+ÑÏ¸ñËµÀ´ Docker ²¢²»ÊÇÒ»¸öÐéÄâ»¯¼¼Êõ£¬µ«ÊÇÒòÎª Docker ÄÜ¹»Ìá¹©¸øÊ¹ÓÃÕßÒ»ÖÖÇáÁ¿»¯µÄÐéÄâ»úµÄÊ¹ÓÃÌåÑé£¬ËùÒÔÒ²½« Docker ÁÐÔÚÕâÀï¡£Docker ÊÇÒ»¸öÈÝÆ÷¼¼Êõ£¬ËüÍ¨¹ý Linux ÄÚºËµÄÖ§³Ö£¬Ê¹²»Í¬µÄ½ø³Ì¿ÉÒÔÏà»¥¸ôÀë²¢×öµ½×ÊÔ´µÄÏÞÖÆ£¬´Ó¶øÊµÏÖÁË²¿·ÖµÄÐéÄâ»ú×ÊÔ´¸ôÀëµÄÐèÒª¡£Docker Ïà±È½ÏÐéÄâ»úµÄÓÅÊÆÔÚÓÚÇáÁ¿ºÍÏµÍ³×ÊÔ´Ê¹ÓÃÐ§ÂÊ½Ó½üÓÚÊµÌå»ú¡£ÒòÎªÏÖÔÚËæ×ÅÐèÇóµÄ·¢Õ¹ºÍ¼¼ÊõµÄ½ø²½£¬·þÎñÆ÷¶ËÓ¦ÓÃÏò×ÅÒ»ÖÖÇáÁ¿»¯ºÍÔ½À´Ô½·Ö²¼Ê½µÄ·½Ïò·¢Õ¹¡£ÐéÄâ»úÕâÑùÖØÁ¿¼¶µÄ¼¼Êõ¶ÔÓÚÐ¡¶ø¶àµÄÓ¦ÓÃÀ´Ëµ±ã²»ÔÙºÏÊÊ£¬ÕâÒ²ÊÇ Docker ÕâÑùµÄÈÝÆ÷¼¼Êõ½üÐ©ÄêÑ¸ËÙ·¢Õ¹²¢³ÊÏÖ»ðÈÈ×´Ì¬µÄÖØÒªÔ­Òò¡£
 
 ## ¸ß¿ÉÓÃÏµÍ³
-### Pacemaker
+### HAProxy
+HAProxy ÊÇÒ»¸ö¸ßÐÔÄÜµÄ TCP ºÍ HTTP ·´Ïò´úÀí´úÀíºÍ¸ºÔØ¾ùºâ·þÎñÆ÷¡£¿ÉÓÃ·´Ïò´úÀíºÍ¸ºÔØ¾ùºâ»¹ÓÐ Nginx¡£Niginx ¸üÆ«ÏòÓÚ HTTP Ð­Òé¡£ÁíÍâ Varnish ºÍ Squid ¿ÉÒÔ×÷ÎªÇ°¶ËµÄ´úÀí£¬µ«ÊÇËüÃÇ¸üÆ«ÖØ»º´æ¹¦ÄÜ
+
+### Pacemaker & Corosync
 »ùÓÚ Linux µÄ¸ß¿ÉÓÃ¼¯Èº½â¾ö·½°¸
