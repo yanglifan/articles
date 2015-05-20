@@ -123,8 +123,10 @@ HAProxy ÊÇÒ»¸ö¸ßÐÔÄÜµÄ TCP ºÍ HTTP ·´Ïò´úÀí´úÀíºÍ¸ºÔØ¾ùºâ·þÎñÆ÷¡£¿ÉÓÃ·´Ïò´úÀíºÍ¸
 ## ¸üÉÏÒ»²ã
 ### ·þÎñ±àÅÅ£º×¢²á¡¢·¢ÏÖºÍÂ·ÓÉ
 **½áºÏ¼¼Êõ£º**ÅäÖÃ¹ÜÀí¡¢Ô¶³Ìµ÷ÓÃµÈ
+
 ÓÐÐ©ÀàËÆÔçÄêµÄ JNDI¡£¼´Ò»¸öÓ¦ÓÃÈ¥Ô¶³Ì·ÃÎÊÁíÍâÒ»¸öÓ¦ÓÃÊ±£¬Ö»ÐèÖªµÀËüËùÒª·ÃÎÊµÄÓ¦ÓÃµÄÃû³Æ¡¢°æ±¾µÈÐÅÏ¢£¬¼´¿Éµ÷ÓÃ³É¹¦¡£²»ÐèÒª¿¼ÂÇËüËùÒªµ÷ÓÃµÄÓ¦ÓÃµÄ¾ßÌåµØÖ·¡£
 
 ### ÔÆ²Ù×÷ÏµÍ³
 **½áºÏ¼¼Êõ£º**ÐéÄâ»ú¡¢ÈÝÆ÷¼¼Êõ¡¢ÍøÂçÐéÄâ»¯¡¢ÅäÖÃ¹ÜÀí¡¢ÏûÏ¢¶ÓÁÐ
+
 Apache Mesos¡¢Google Berg¡¢ÌÚÑ¶ Gaia¡¢°Ù¶È Matrix
