@@ -1,14 +1,17 @@
 # ·Ö²¼Ê½ÏµÍ³¼¼Êõ¸ÅÒª
 ## ·Ö²¼Ê½ÏµÍ³Ö®ÅäÖÃ¹ÜÀí
-ÔÚ·Ö²¼Ê½¼¯ÈºÖÐ£¬ÈçºÎÈÃÃ¿Ò»¸ö½ÚµãÁË½â½ÚµãµÄ×´Ì¬¡¢ÁË½âÆäËùÒÔÀ´µÄ·þÎñµÄµØÖ·µÈÐÅÏ¢¡¢Ð­µ÷¼¯Èº¼äµÄÐ­×÷£¬µÈµÈÕâÐ©ÊÂÇé¶ÔÓÚÕû¸ö¼¯ÈºµÄÕý³£¹¤×÷ÖÁ¹ØÖØÒª¡£ËùÒÔÕâ±ãÊÇ Apache Zookeeper Ö®ÀàµÄÈí¼þµÄÓÃÎäÖ®µØ¡£
+**¹Ø¼ü×Ö£º**Apache Zookeeper¡¢Paxos Ëã·¨¡¢Etcd¡¢Raft¡¢Apache Curator
+
+ÅäÖÃÊý¾ÝÍùÍùÊÇÒ»¸öÓ¦ÓÃÖÐ×îÖØÒªµÄÊý¾ÝÖ®Ò»£¬Ëü¹ØÏµµ½Ó¦ÓÃÔËÐÐµÄÃ¿¸ö½×¶Î¡£¶øÔÚ·Ö²¼Ê½Ó¦ÓÃÖÐ£¬ÅäÖÃÊý¾ÝÔòÓÖ±Èµ¥»úÓ¦ÓÃÔö¼ÓÀïÖîÈçÔ¶³Ì·þÎñµÄÏà¹ØÐÅÏ¢¡¢½ÚµãµÄ×´Ì¬ÐÅÏ¢¡¢Master ½ÚµãµÈÊý¾Ý¡£¶øÇÒÔÚÈçºÎ´æ´¢ºÍ¹ÜÀíÕâÐ©Êý¾ÝÉÏ£¬·Ö²¼Ê½Ó¦ÓÃÒª±Èµ¥»úÓ¦ÓÃ¸´ÔÓÐí¶à¡£ÒòÎª·Ö²¼Ê½Ó¦ÓÃ²»ÄÜ´æÔÚµ¥µã£¬¶øÅäÖÃÊý¾ÝÕâÑùµÄÖØÒªÊý¾Ý±ØÐë·Ö²¼Ê½µÄ´æ´¢£¬ËùÒÔ±£Ö¤ÕâÐ©·Ö²¼Ê½µÄÅäÖÃÊý¾ÝµÄÒ»ÖÂÐÔÔò³ÉÎªÖØÖÐÖ®ÖØ¡£ÓÐµÄ³¡¾°£¬ÀýÈçÒ»¸öÓ¦ÓÃ½ÚµãÏòÅäÖÃ·þÎñÆ÷×¢²áËüËùÄÜÌá¹©µÄ·þÎñµÄÏà¹ØÐÅÏ¢£¬ÀýÈç IP µØÖ·¡¢¶Ë¿Ú¡¢·þÎñ°æ±¾µÈ¡£ÕâÑùµÄ²Ù×÷Ïà¶Ô²»ÈÝÒ×²úÉú³åÍ»¡£µ«ÓÐµÄ³¡¾°£¬ÀýÈçÎªÕû¸ö¼¯ÈºÑ¡¾ÙÒ»¸ö Master ½Úµã£¬ÒòÎªÔÚÍ¬Ò»Ê±¿Ì£¬»áÓÐ¶à¸öÆÕÍ¨½ÚµãÈ¥¾ºÑ¡³ÉÎª Master ½Úµã£¬ËùÒÔ³åÍ»ÔÚËùÄÑÃâ¡£´ËÊ±£¬Ò»¸ö¿ÉÒÔ¸ßÐ§½â¾öÊý¾ÝÒ»ÖÂÐÔÎÊÌâµÄËã·¨±ãÊÇ·Ç³£±ØÒªµÄÁË¡£
+
+ÔÚÕâÒ»ÁìÓò£¬Paxos Ëã·¨±»Ìá³öÀ´½â¾öÕâ¸öÎÊÌâ¡£ÔÚ Paxos Ëã·¨ÖÐ£¬ÓÐÈý¸ö½ÇÉ«£ºproposers¡¢acceptors ºÍ learners¡£µ±ÐèÒªÓÐÐÂ¾öÒé²úÉúµÄÊ±ºò£¬proposer »áÏò³¬¹ý°ëÊýµÄ acceptors Ìá³öÌáÒé£¬ÌáÒé°üº¬Ò»¸öÒ»Ö±Ôö´óµÄÌáÒéºÅ¡£acceptors »á±£Ö¤½ÓÊÜµ±Ç°ËüËùÊÜµ½µÄÌáÒéºÅ×î´óµÄÌáÒé£¬²¢Ïò·¢ÆðÌáÒé proposer ·µ»Ø½ÓÊÜ»ò¾Ü¾ø¡£µ± proposer ·¢ÏÖÓÐ³¬¹ý°ëÊýµÄ acceptors ½ÓÊÜÌáÒéÖ®ºó£¬Ëü±ã»áÏòÕû¸ö¼¯ÈºÐû²¼ÌáÒéÍ¨¹ý£¬±äÎª¾öÒé¡£learners ²»»á²Î¼Ó±í¾ö£¬Ö»»á½ÓÊÜ¾öÒé¡£
+
+Paxos Ëã·¨µÄÓïÑÔ±íÊö¿´ÉÏÈ¥²»ÄÑ£¬µ«ÊÇÆäÖÐµÄ¼¼ÊõÄÑµã²¢²»ÉÙ¡£ºÃÔÚÏÖÔÚÒÑ¾­ÓÐÁËºÜ¶àµÄ½â¾ö·½°¸£¬ÆäÖÐ×îÎªÖøÃûµÄ±ãÊÇ Apache Zookeeper¡£
 
 ### Apache Zookeeper
 Zookeeper ÊÇÒ»¸ö·Ö²¼Ê½µÄ·þÎñ¹ÜÀí¿ò¼Ü¡£Zookeeper µÄµäÐÍµÄÓ¦ÓÃ³¡¾°°üÀ¨ÅäÖÃÎÄ¼þµÄ¹ÜÀí¡¢¼¯Èº¹ÜÀí¡¢·Ö²¼Ê½Ëø¡¢Leader Ñ¡¾Ù¡¢¶ÓÁÐ¹ÜÀíµÈ¡£Zookeeper ¿É¹¤×÷ÔÚ¼¯ÈºÄ£Ê½ÏÂ£¬`zoo.cfg` ÖÐ¼ÇÂ¼×Å¼¯ÈºÖÐËùÓÐ Zookeeper ·þÎñÆ÷µÄµØÖ·£¬Ã¿¸ö·þÎñÆ÷ÓÐ×Ô¼ºÎ¨Ò»µÄ ID¡£Í¬Ê±£¬Ã¿¸ö·þÎñÆ÷ÔÚ×Ô¼ºµÄ `dataDir` Ä¿Â¼ÏÂ»¹ÒªÓÐÒ»¸ö `myid` ÎÄ¼þ£¬ÒÔ±êÊ¾×Ô¼ºµÄ ID¡£
 
-ÏÖÔÚÀàËÆ Zookeeper µÄÏîÄ¿»¹ÓÐ CoreOS µÄ Etcd
-
-### Apache Curator
-Zookeeper µÄ¿Í»§¶Ë¿ò¼Ü£¬¼ò»¯ Zookeeper µÄÊ¹ÓÃ
+ÏÖÔÚÀàËÆ Zookeeper µÄÏîÄ¿»¹ÓÐ CoreOS µÄ Etcd µÈ
 
 ## ·Ö²¼Ê½´æ´¢Ö®ÎÄ¼þÏµÍ³
 ### ¿é´æ´¢Óë¶ÔÏó´æ´¢
@@ -47,11 +50,12 @@ Memcached ÊÇÀÏÅÆµÄ¡°·Ö²¼Ê½¡±»º´æ½â¾ö·½°¸¡£·Ö²¼Ê½Ö®ËùÒÔ¼ÓÒýºÅ£¬ÊÇÒòÎª Memcached ·
 ÔÚÕâ¸öÁìÓò£¬Ä¿Ç°¿ªÔ´µÄÏîÄ¿²»ÊÇºÜ¶à¡£Ö®Ç°°¢Àï¿ªÔ´µÄ Cobar ÏÖÔÚÒÑ¾­×ªÎª±ÕÔ´¡£ÏÖÔÚ¹úÄÚ¿ªÔ´ÉçÇøÔÚ [Cobar](http://luruoyu.blog.51cto.com/2876338/929653) µÄ»ù´¡Ö®ÉÏ·¢ÆðÁËÒ»¸ö MyCAT µÄÏîÄ¿£¬Ä¿µÄÊÇÌá¹©Ò»¸ö¸üºÃµÄ¿ªÔ´·Ö²¼Ê½Êý¾Ý¿â·ÃÎÊÖÐ¼ä²ã¡£
 
 ### NoSQL
-Ê×ÏÈ±ØÐëËµÃ÷µÄÊÇ NoSQL ²¢²»´ú±í×Å·Ö²¼Ê½£¬ËùÒÔ NoSQL 
+´ó²¿·Ö NoSQL ËäÈ»¶Ô·Ö²¼Ê½µÄÖ§³ÖÊÇÓÑºÃµÄ£¬µ«Õâ²¢²»ÒâÎ¶×ÅÊ¹ÓÃÕâÐ© NoSQL Êý¾Ý¿â¾Í¿ÉÒÔÇáÇáËÉËÉµØÊµÏÖÒ»¸ö¼¯Èº¡£ÀýÈçÖøÃûµÄ Key/Value Êý¾Ý¿â Redis¡£Ëü 3.0 Ö®Ç°Ò»Ö±Ã»ÓÐ¹Ù·½µÄ¼¯Èº·½°¸£¬ËùÒÔ¸÷¸ö´ó¹æÄ£Ê¹ÓÃ Redis ¶¼ÐèÒª×Ô¼ºÊµÏÖ·Ö²¼Ê½·½°¸£¬ÀýÈç Twitter µÄ Twemproxy¡¢Íã¶¹¼ÔµÄ Codis µÈµÈ¡£
 
-reddis Ò»ÖÂÐÔ»ªÎ÷
+ÔÚÊµÏÖÊý¾ÝµÄ·Ö²¼Ê½½â¾ö·½°¸µÄÊ±ºò£¬ÓÐÒ»¸öËã·¨ÊÇ×î³£±»Ê¹ÓÃµÄ ¡ª¡ª Ò»ÖÂÐÔ¹þÏ£Ëã·¨£¬ÕâÀïÖ»ÊÇ¼òµ¥ÌáÒ»ÏÂ£¬²»×ö½øÒ»²½½éÉÜ¡£
 
 ## ·Ö²¼Ê½ÏµÍ³Ö®Ô¶³Ìµ÷ÓÃ
+**¹Ø¼ü×Ö£º** NIO¡¢Netty¡¢epoll¡¢Thrift¡¢Protobuf
 ·Ö²¼Ê½ÏµÍ³ÖÐ£¬×é¼þµÄÏà»¥µ÷ÓÃ±ØÐëÍ¨¹ýÔ¶³Ìµ÷ÓÃÀ´ÊµÏÖ¡£REST API ºÍÏûÏ¢¶ÓÁÐ¹ãÒåÉÏÒ²ËãÊÇÔ¶³Ìµ÷ÓÃ£¬µ«Ç°ÕßÍ¨³£ÓÃ×÷¹«¿ªµÄ API »òÕß´óÐÍ·þÎñ¼äµÄµ÷ÓÃ¡£¶ÔÓÚ·þÎñÄÚ²¿Ö®¼äµÄ¸ü¼ÓÏ¸Á£¶ÈµÄ¡¢Æµ·±µÄÔ¶³Ìµ÷ÓÃ£¬REST API ¾ÍÏÔµÃÐÔÄÜ²»×ã¡£ÕâÖ÷ÒªÊÇÒòÎªÐ­Òé·½ÃæµÄÏÞÖÆ¡£ÏûÏ¢¶ÓÁÐÔò¶îÍâµØÆðµ½ÁËÒì²½ºÍÏ÷·åµÄ×÷ÓÃ¡£ËùÒÔÎÒÃÇÕâÀï²àÖØËµÒ»ÏÂ·Ç WebService ºÍÏûÏ¢¶ÓÁÐµÄÔ¶³Ìµ÷ÓÃ¡£
 
 Ô¶³Ìµ÷ÓÃµÄ±¾ÉíÓÐÁ½¸öÖØÒªµÄ¼¼Êõµã£¬Ò»¸öÊÇ IO ¼¼Êõ¡¢Ò»¸öÊÇÐòÁÐ»¯¼¼Êõ¡£ÁíÍâ£¬µ±×é¼þ¼äµÄµ÷ÓÃ±ä³ÉÔ¶³Ìµ÷ÓÃÖ®ºóËùÒýÈëµÄ·þÎñ×¢²á¡¢·¢ÏÖ¡¢Â·ÓÉµÄÎÊÌâ£¬Õâ¸öÎÊÌâ¿ÉÒÔ¼ò³ÆÎª·þÎñµÄÖÎÀí¡£
@@ -88,6 +92,7 @@ Apache Avro ÊÇ Apache Hadoop µÄÒ»¸ö×ÓÏîÄ¿¡£ËüÌá¹©ÁËÁ½ÖÖÐòÁÐ»¯¸ñÊ½£ºJSONºÍ¶þ½øÖÆ¸
 * [ÐòÁÐ»¯ºÍ·´ÐòÁÐ»¯](http://www.infoq.com/cn/articles/serialization-and-deserialization)
 
 ## ·Ö²¼Ê½ÏµÍ³Ö®ÏûÏ¢ÖÐ¼ä¼þ
+**¹Ø¼ü×Ö£º**Kafka¡¢RabbitMQ
 ÔÚ·Ö²¼Ê½ÏµÍ³ÖÐ£¬ÏûÏ¢ÖÐ¼ä¼þµÄÖØÒªÐÔÔ½À´Ô½Ã÷ÏÔ¡£ÏûÏ¢ÖÐ¼ä¼þ¿ÉÒÔ½âñîÄ£¿é¡¢Ìá¹©Òì²½µ÷ÓÃ¹¦ÄÜ¡¢ÏûÏ¢³Ö¾Ã»¯¡¢ÏûÏ¢Ï÷·å¡£ÒÑÓÐµÄÈç Apache ActiveMQ ÎÞ·¨Âú×ãÐÂµÄÐèÒª£¬ÓÚÊÇ³öÏÖÁËÈç RabbitMQ¡¢Apache Kafka µÈÐÂÐÍµÄÏûÏ¢ÖÐ¼ä¼þ²úÆ·¡£
 
 ### Apache Kafka
@@ -102,6 +107,7 @@ Apache Kafka ²»Í¬ÓÚ´«Í³µÄÏûÏ¢ÖÐ¼ä¼þ£¬Ëü²ÉÓÃ¡°À­¡±ÏûÏ¢Ä£Ê½£¬¶ø²»ÊÇ´«Í³µÄ¡°ÍÆ¡±ÏûÏ
 RabbitMQ ÊÇÒ»¸öÊ¹ÓÃ Erlang ¿ª·¢µÄ AMQP (Advanced Message Queue Protocol) ÊµÏÖ¡£ÏÖÔÚ RabbitMQ ÊÇÓÉ VMware ÆìÏÂµÄ SpringSource ¸ºÔð¿ª·¢¡£AMQP ÊÇÒ»¸öÓïÑÔÎÞ¹ØµÄÏûÏ¢¶ÓÁÐÐ­Òé¡£ÔÚ RabbitMQ ÖÐ£¬ÓÐÈý¸ö¸ÅÄî£ºExchange¡¢Queue ºÍ Route key¡£Exchange ÓÃÀ´±êÊ¾Éú²úÕß£¬Queue ÓÃÀ´±êÊ¾Ïû·ÑÕß£¬¶ø Route key ÓÃÀ´¹ØÁªÕâÁ½Õß¡£RabbitMQ ÖÐÕâÖÖ·½Ê½Ìá¹©ÁË¸üÁé»îµÄÓ¦ÓÃÄ£Ê½¡£
 
 ## ·Ö²¼Ê½ÏµÍ³Ö®ÐéÄâ»¯¼¼Êõ
+**¹Ø¼ü×Ö£º**OpenStack¡¢Docker¡¢ÈÝÆ÷¼¼Êõ
 ÐéÄâ»¯¼¼ÊõÊÇÌá¸ßÓ²¼þÀûÓÃÂÊµÄÖØÒªÊÖ¶Î¡£ÐéÄâ»¯¼¼ÊõÊÇÊµÏÖÔÆ¼ÆËãµÄÖØÒª¼¼Êõ¡£ÐéÄâ»¯¼¼ÊõµÄ×îµ×²ãÊÇ¸÷ÖÖÓ²¼þµÄÐéÄâ»¯£¬Èç CPU ÐéÄâ»¯¡¢ÄÚ´æÐéÄâ»¯¡¢´æ´¢ÐéÄâ»¯¡¢ÍøÂçÐéÄâ»¯µÈµÈ¡£È»ºóÔÙ»ùÓÚÕâÐ©¼¼Êõ£¬¹¹½¨³ö¸÷ÖÖÐéÄâ»ú¼¼Êõ¡£È»ºó¸÷¸ö³§ÉÌÓÖ»ùÓÚÐéÄâ»ú¼¼ÊõºÍÆäËüÐéÄâ»¯¼¼Êõ¹¹½¨³ö IaaS¡¢PaaS ºÍ SaaS µÈÆ½Ì¨ºÍÈí¼þ²úÆ·¡£
 
 ### OpenStack
@@ -110,9 +116,10 @@ OpenStack Õâ¸ö¿ªÔ´ÏîÄ¿°üº¬ÁËÒ»ÏµÁÐÓÃÓÚ IaaS Æ½Ì¨´î½¨µÄ×é¼þµÄºÏ³Æ¡£ÕâÐ©×é¼þ°üº¬ÓÃ
 ### Docker
 ÑÏ¸ñËµÀ´ Docker ²¢²»ÊÇÒ»¸öÐéÄâ»¯¼¼Êõ£¬µ«ÊÇÒòÎª Docker ÄÜ¹»Ìá¹©¸øÊ¹ÓÃÕßÒ»ÖÖÇáÁ¿»¯µÄÐéÄâ»úµÄÊ¹ÓÃÌåÑé£¬ËùÒÔÒ²½« Docker ÁÐÔÚÕâÀï¡£Docker ÊÇÒ»¸öÈÝÆ÷¼¼Êõ£¬ËüÍ¨¹ý Linux ÄÚºËµÄÖ§³Ö£¬Ê¹²»Í¬µÄ½ø³Ì¿ÉÒÔÏà»¥¸ôÀë²¢×öµ½×ÊÔ´µÄÏÞÖÆ£¬´Ó¶øÊµÏÖÁË²¿·ÖµÄÐéÄâ»ú×ÊÔ´¸ôÀëµÄÐèÒª¡£Docker Ïà±È½ÏÐéÄâ»úµÄÓÅÊÆÔÚÓÚÇáÁ¿ºÍÏµÍ³×ÊÔ´Ê¹ÓÃÐ§ÂÊ½Ó½üÓÚÊµÌå»ú¡£ÒòÎªÏÖÔÚËæ×ÅÐèÇóµÄ·¢Õ¹ºÍ¼¼ÊõµÄ½ø²½£¬·þÎñÆ÷¶ËÓ¦ÓÃÏò×ÅÒ»ÖÖÇáÁ¿»¯ºÍÔ½À´Ô½·Ö²¼Ê½µÄ·½Ïò·¢Õ¹¡£ÐéÄâ»úÕâÑùÖØÁ¿¼¶µÄ¼¼Êõ¶ÔÓÚÐ¡¶ø¶àµÄÓ¦ÓÃÀ´Ëµ±ã²»ÔÙºÏÊÊ£¬ÕâÒ²ÊÇ Docker ÕâÑùµÄÈÝÆ÷¼¼Êõ½üÐ©ÄêÑ¸ËÙ·¢Õ¹²¢³ÊÏÖ»ðÈÈ×´Ì¬µÄÖØÒªÔ­Òò¡£
 
-## ¸ß¿ÉÓÃÏµÍ³
-### HAProxy
+## ÆäËü
+### ¸ºÔØ¾ùºâ
+#### HAProxy
 HAProxy ÊÇÒ»¸ö¸ßÐÔÄÜµÄ TCP ºÍ HTTP ·´Ïò´úÀí´úÀíºÍ¸ºÔØ¾ùºâ·þÎñÆ÷¡£¿ÉÓÃ·´Ïò´úÀíºÍ¸ºÔØ¾ùºâ»¹ÓÐ Nginx¡£Niginx ¸üÆ«ÏòÓÚ HTTP Ð­Òé¡£ÁíÍâ Varnish ºÍ Squid ¿ÉÒÔ×÷ÎªÇ°¶ËµÄ´úÀí£¬µ«ÊÇËüÃÇ¸üÆ«ÖØ»º´æ¹¦ÄÜ
 
-### Pacemaker & Corosync
-»ùÓÚ Linux µÄ¸ß¿ÉÓÃ¼¯Èº½â¾ö·½°¸
+### ÔÆ²Ù×÷ÏµÍ³
+Apache Mesos¡¢Google Berg¡¢ÌÚÑ¶ Gaia¡¢°Ù¶È Matrix
