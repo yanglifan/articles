@@ -16,14 +16,14 @@
  
 ÕâÖÚ¶à·½°¸ÖÐ£¬Paxos Ëã·¨ËãÊÇ×î¼Ñ·½°¸Ö®Ò»¡£¹ØÓÚ Paxos Ëã·¨µÄÄÚÈÝ£¬²»ÔÚÕâÀïÏêÊöÁË¡£¼òµ¥ÃèÊö¾ÍÊÇ¼¯ÈºÖÐ¸÷½ÚµãÏà»¥ÒÔÌáÒéµÄ·½Ê½Í¨ÐÅ£¨¶ÔÒ»ÏîÊý¾ÝµÄÐÞ¸Ä£©£¬ÌáÒéÖÐ´øÓÐ²»¶ÏÔö¼ÓµÄ ID ºÅ£¬½ÚµãÓÀÔ¶Í¬Òâµ±Ç° ID ºÅ×î´óµÄÌáÒé£¬²¢¾Ü¾øÆäËüÌáÒé¡£µ±ÓÐ°ëÊýÒÔÉÏ½ÚµãÍ¬ÒâÒ»ÏîÌáÒéÖ®ºó£¬Õâ¸öÌáÒé±ã±»Õû¸ö½ÚµãËù½ÓÊÜ²¢²ÉÄÉ¡£
 
-### 1.1 Apache Zookeeper 
+### 1.1. Apache Zookeeper 
 Paxos Ëã·¨µÄÓïÑÔ±íÊö¿´ÉÏÈ¥²»ÄÑ£¬µ«ÊÇÆäÖÐµÄ¼¼ÊõÄÑµã²¢²»ÉÙ¡£ºÃÔÚÏÖÔÚÒÑ¾­ÓÐÁËºÜ¶àµÄ½â¾ö·½°¸£¬ÆäÖÐ×îÎªÖøÃûµÄ±ãÊÇ Apache Zookeeper¡£Zookeeper ²»½ö¿ÉÒÔÓÃÀ´´æ´¢ÅäÖÃÊý¾Ý£¬»¹¿ÉÒÔÓÃÀ´ÊµÏÖ¼¯Èº Master Ñ¡¾Ù¡¢·Ö²¼Ê½ËøµÈ³¡¾°¡£Apache Curator ÊÇ Zookeeper µÄ¿Í»§¶Ë£¬¿ÉÒÔ¼ò»¯¶Ô Zookeeper µÄÊ¹ÓÃ£¬ÊµÏÖ¸÷Ê½µÄ³¡¾°¡£
 
 Zookeeper ÊÇÒ»¸ö·Ö²¼Ê½µÄ·þÎñ¹ÜÀí¿ò¼Ü¡£Zookeeper µÄµäÐÍµÄÓ¦ÓÃ³¡¾°°üÀ¨ÅäÖÃÎÄ¼þµÄ¹ÜÀí¡¢¼¯Èº¹ÜÀí¡¢·Ö²¼Ê½Ëø¡¢Leader Ñ¡¾Ù¡¢¶ÓÁÐ¹ÜÀíµÈ¡£Zookeeper ¿É¹¤×÷ÔÚ¼¯ÈºÄ£Ê½ÏÂ£¬`zoo.cfg` ÖÐ¼ÇÂ¼×Å¼¯ÈºÖÐËùÓÐ Zookeeper ·þÎñÆ÷µÄµØÖ·£¬Ã¿¸ö·þÎñÆ÷ÓÐ×Ô¼ºÎ¨Ò»µÄ ID¡£Í¬Ê±£¬Ã¿¸ö·þÎñÆ÷ÔÚ×Ô¼ºµÄ `dataDir` Ä¿Â¼ÏÂ»¹ÒªÓÐÒ»¸ö `myid` ÎÄ¼þ£¬ÒÔ±êÊ¾×Ô¼ºµÄ ID¡£ÔÚ Zookeeper ÖÐ£¬Êý¾ÝÒÔÊ÷×´µÄ½á¹¹´æ´¢£¬ÀàËÆÓÚ LDAP Êý¾Ý¿â¡£
  
 ÏÖÔÚÀàËÆ Zookeeper µÄÏîÄ¿»¹ÓÐÊ¹ÓÃ go ÓïÑÔÊµÏÖµÄ Etcd¡£
  
-### 1.2 ²Î¿¼£º
+### 1.2. ²Î¿¼£º
 * [PaxosËã·¨](http://zh.wikipedia.org/wiki/Paxos%E7%AE%97%E6%B3%95)
 * [zookeeper½ÚµãÊýÓëwatchµÄÐÔÄÜ²âÊÔ](http://codemacro.com/2014/09/21/zk-watch-benchmark/)
 * [etcd£º´ÓÓ¦ÓÃ³¡¾°µ½ÊµÏÖÔ­ÀíµÄÈ«·½Î»½â¶Á](http://www.infoq.com/cn/articles/etcd-interpretation-application-scenario-implement-principle)
@@ -37,23 +37,21 @@ Zookeeper ÊÇÒ»¸ö·Ö²¼Ê½µÄ·þÎñ¹ÜÀí¿ò¼Ü¡£Zookeeper µÄµäÐÍµÄÓ¦ÓÃ³¡¾°°üÀ¨ÅäÖÃÎÄ¼þµÄ¹Ü
  
 Ê¹ÓÃ HTTP + JSON µÄ·½Ê½Í¬Ñù¿ÉÒÔÊµÏÖÄ£¿éÖ®¼äµÄÔ¶³Ìµ÷ÓÃ£¬µ«ÕâÖÖ·½Ê½Í¨³£ÓÃÀ´ÊµÏÖ Public API¡£ÔÚÏµÍ³ÄÚ²¿£¬Ô¶³Ìµ÷ÓÃÒªÇó¸ü¿ìµÄËÙ¶È£¬¸üÐ¡µÄÑÓ³Ù£¬»¹ÓÐ»¹ÓÐÒì²½µ÷ÓÃµÄÐèÇó£¬ËùÒÔ HTTP + JSON Í¨³£ÎÞ·¨Âú×ãÕâÑùµÄÒªÇó¡£Ô¶³Ìµ÷ÓÃÓÐÁ½¸öÖØÒªµÄ¼¼Êõµã£¬Ò»¸öÊÇ IO ¼¼Êõ¡¢Ò»¸öÊÇÐòÁÐ»¯¼¼Êõ¡£ÁíÍâ£¬Ô¶³Ìµ÷ÓÃ»¹Òý³öÀ´ÁíÁ½¸öÎÊÌâ£º1. ·þÎñ×¢²á¡¢·¢ÏÖ¡¢Â·ÓÉµÄÎÊÌâ¡£Õâ¸öÎÊÌâµÄÐèÒª½áºÏÀýÈç Zookeeper ·þÎñÈ¥½â¾ö£»2. ÈçºÎ¼ò»¯Ô¶³Ìµ÷ÓÃµÄÊ¹ÓÃ£¬Ê¹ÆäÈçÍ¬±¾µØµ÷ÓÃÒ»Ñù¼òµ¥¡£Õâ¸öÎÊÌâÐèÒª½áºÏ AOP Ö®ÀàµÄ¼¼Êõ¡£ÕâÁ½¸öÎÊÌâµÄ¾ßÌå½â¾ö²»ÔÚ±¾½ÚÌÖÂÛ·¶Î§Ö®ÄÚ¡£
  
-### 2.1 IO
-IO ¿É¼òµ¥·ÖÎª×èÈûIOÓë·Ç×èÈûIO¡¢Í¬²½IOÓëÒì²½IO ËÄÖÖÄ£ÐÍ¡£×èÈû IO Ä£ÐÍÖµµÃÊÇ IO ²Ù×÷»á×èÈû·¢Æð IO µÄ½ø³Ì»òÕßÏß³Ì£»·Ç×èÈû IO µÄÒ»¸öÊµÏÖ·½Ê½ Reactor Ä£ÐÍ£¬¼´ÔÚÏß³ÌÄ£ÐÍÉÏ£¬·Ö³ö·ÖÅä IO ÈÎÎñµÄ Boss Ïß³ÌºÍÖ´ÐÐ IO ²Ù×÷µÄ Worker Ïß³Ì¡£·Ç×èÈû IO Óë ×èÈû IO Ïà±È£¬½ø²½µÄµØ·½ÔÚÓÚ·Ç×èÈû IO Ä£ÐÍÖÐµÄ Worker Ïß³ÌÔÚ IO ²Ù×÷Ã»ÓÐ ready µÄÇé¿öÏÂ²»»á±»×èÈû¡£Ö»ÓÐµ±¶Á»òÐ´µÄ²Ù×÷ ready Ö®ºó£¬Worker Ïß³Ì²Å»áÖ´ÐÐÈÎÎñ£¬¶ø²»»áÎÞ¹ÊµÄ×èÈû¡£
+### 2.1. IO
+£¨ÕâÀïÖ»Ëµ Socket IO£©³£¼ûµÄ IO Ä£ÐÍÓÐ×èÈû IO¡¢·Ç×èÈû IO ºÍÒì²½ IO¡£×èÈû IO Ö¸µÄÊÇÈç¹ûÒ»¸öÏß³ÌÒªÔÚ Socket Á¬½ÓÉÏ½øÐÐÄ³ÖÖ IO ²Ù×÷Ê±£¨¶Á»òÐ´Êý¾Ý£©£¬µ±Ã»ÓÐ²Ù×÷²»¿ÉÖ´ÐÐÊ±£¨Ã»ÓÐÊý¾Ý¿É¶Á»òÎÞ·¨Ð´Êý¾Ý£©£¬Ö´ÐÐ²Ù×÷µÄÏß³Ì±ã»á±»¹ÒÆð£¬²Ù×÷±ã»á±»×èÈû£¬Ö±µ½²Ù×÷¿ÉÒÔÖ´ÐÐ¡£ÕâÖÖ·½Ê½µÄºÃ´¦ÊÇÒµÎñ´úÂë±àÐ´ÆðÀ´ºÜ¼òµ¥£¬È±µãÊÇ×ÊÔ´ÀûÓÃÂÊ²»¸ß¡£ÒòÎªÒ»¸öÁ¬½Ó±ØÐëÓÐÒ»¸öÏß³ÌÈ¥´¦Àí¡£µ±ÓÐ´óÁ¿Á¬½ÓÊ±£¬±ã»áÏûºÄ´óÁ¿µÄÏß³Ì¡£Õâ¸öÈ±µã·ÅÔÚ·þÎñÆ÷¶Ë¿ª·¢ÁìÓò¾ÍÏÔµÃ·Ç³£ÑÏÖØÁË¡£
+
+·Ç×èÈû IO ÊµÏÖÁËÏß³ÌµÄ¶àÂ·¸´ÓÃ£¬Ò»¸öÏß³Ì±»ÓÃÀ´¿ÉÒÔ´¦Àí¶à¸öÁ¬½Ó£»Òì²½ IO ÔòÊÇÓÉ²Ù×÷ÏµÍ³À´ÊµÏÖ IO µÄ¶ÁÐ´²Ù×÷¡£ÔÚÊý¾Ý ready Ö®ºó£¬Í¨ÖªÒµÎñÏß³Ì´¦Àí¡£
+
+ÉÏÃæÖ»ÊÇ¶Ô×èÈû IO ºÍ·Ç×èÈû IO µÄÒ»¸öÁýÍ³µÄ½éÉÜ¡£´Ó¾ßÌåµÄ¼¼ÊõÀ´¿´£¬Linux Í¨¹ý epoll ¼¼ÊõÌá¹©ÁË¶Ô·Ç×èÈû IO µÄÖ§³Ö¡£epoll ÊÇ Linux ÄÚºËµÄÒ»¸öÏµÍ³µ÷ÓÃ£¬×îÔçÔÚ 2.5.44 °æÖÐ±»¼ÓÈë¡£epoll µÄÒâË¼ÊÇ event poll¡£¼òµ¥À´Ëµ¾ÍÊÇµ±ÓÐÒ»¸ö IO ÊÂ¼þ·¢ÉúÊ±£¬Linux ÄÚºË±ã»áÍ¨ÖªÓÃ»§¡£Ê¹ÓÃ·½Ê½ÊÇÔÚ´´½¨ epoll ¾ä±úÖ®ºó£¬ÓÃ»§ÔÚÆäÉÏ²»¶ÏµØÑ­»·ÒÔ»ñÈ¡ÐÂµÄÊÂ¼þ£¨µ±ÓÐÊÂ¼þ·¢ÉúÊ±£©¡£ÕâÐ©ÊÂ¼þÊÇÀ´×Ô¶à¸öÁ¬½ÓµÄ£¬´Ó¶øÊµÏÖÁËÏß³ÌµÄ¶àÂ·¸´ÓÃ¡£
+
+ÔÚ Java 1.4 ÖÐ£¬Ò²ÒýÈëÁË NIO µÄÖ§³Ö (java.nio.*)¡£ÔÚ Java NIO API ÖÐ£¬ÓÃ»§µÄ³ÌÐò¿ÉÒÔ½«Ò»¸öÁ¬½Ó (`SelectableChannel.register(Selector sel, int ops)`) ×¢²áµ½Ò»¸ö `Selector` ÉÏ£¨Ò»¸ö Selector ¿ÉÒÔÓÐ¶à¸öÁ¬½Ó×¢²á£©¡£×¢²áÖ®ºó£¬ÓÃ»§µÄ³ÌÐò±ã¿ÉÒÔÍ¨¹ý²»¶ÏµØÑ­»·µ÷ÓÃ `Selector.selectedKeys()` ·½·¨»ñµÃÕâ¸öÁ¬½ÓÉÏµÄÊÂ¼þ²¢½øÐÐ´¦Àí£¨Í¨³£»áÊ¹ÓÃÁíÍâµÄÏß³ÌÈ¥´¦ÀíÊÂ¼þ£¬¼´ Reactor Ä£ÐÍ£©
+
+ËäÈ» Java Îª NIO ¿ª·¢Ìá¹©ÁËÁ¼ºÃµÄ API Ö§³Ö£¨´Ó 1.7 ¿ªÊ¼»¹Ö§³ÖÁË AIO£©£¬µ«ÊÇ IO ¿ª·¢ÒÀ¾ÉÓÐºÜ¸ßµÄ¸´ÔÓÐÔ£¬ÇÒ Java NIO Àà¿âµÄÊÇ JDK ÖÐ bug ½Ï¶àµÄ²¿·Ö¡£¹Ê²»ÍÆ¼öÆÕÍ¨¿ª·¢ÕßÖ±½Ó»ùÓÚ JDK ¿ª·¢ÍøÂç IO ¹¦ÄÜ£¬¶øÊÇ½¨ÒéÊ¹ÓÃ Netty ½øÐÐ¿ª·¢¡£¹ØÓÚ Netty ÕâÀï¾Í²»×ö½éÉÜÁË¡£
  
-Òì²½ IO ÔòÊÇÓÉ²Ù×÷ÏµÍ³À´ÊµÏÖ IO µÄ¶ÁÐ´²Ù×÷£¬ÔÚÊý¾Ý ready Ö®ºó£¬½»ÓÉ Worker Ïß³ÌÀ´´¦Àí¡£
- 
-#### ÏµÍ³ IO
-IO ÊÇÒ»¸öºÍ²Ù×÷ÏµÍ³µ×²ãÁªÏµ½ôÃÜµÄ¼¼Êõ¡£¶ÔÓÚÏñ Java ÕâÑùµÄ´øÓÐÐéÄâ»úµÄÓïÑÔ£¬»áÌá¹©Ò»¸öÍ³Ò»µÄ IO ³éÏó¡£¶ÔÓÚ C¡¢C++ ÕâÑùµÄÓïÑÔ£¬IO Ö÷Òª¾ÍÈ¡¾öÓÚ²Ù×÷ÏµÍ³µÄÖ§³Ö¡£
- 
-·Ç×èÈû IO ÔÚ Linux Æ½Ì¨ÉÏÍ¨¹ý epoll À´Ö§³Ö£¬ÔÚ Windows Æ½Ì¨ÉÏÍ¨¹ý iocp À´Ìá¹©Ö§³Ö¡£ÕâÁ½Õß¶¼ÊµÏÖÁËÍ¨¹ýÉÙÁ¿µÄÏß³Ì¶ø´¦Àí¶àÓÚÕâ¸öÊýÄ¿µÄ IO channel µÄÄ¿µÄ¡£ÔÚ Linux kernel µÄ 2.6 °æ±¾ÖÐ£¬ÒýÈëÁË¶ÔÒì²½ IO µÄÖ§³Ö¡£
- 
-#### Java IO
-Java ÔÚ 1.4 ÖÐÒýÈëÁË NIO µÄÖ§³Ö£¬ÔÚ 7.0 (1.7) ÖÐÒýÈëÁË AIO µÄÖ§³Ö¡£Í¨³£Çé¿öÏÂ£¬Java ¿ª·¢Õß²»Ó¦Ö±½Ó»ùÓÚ JDK API ¿ª·¢ IO µÄ¹¦ÄÜ£¬Ö÷ÒªÊÇÏà±È²Ù×÷ÏµÍ³±¾ÉíÌá¹©µÄ API£¬JDK µÄ API ÒÑ¾­Ìá¹©ÁËºÜ¸ß²ã´ÎµÄ³éÏó£¬µ«ÊÇ¶ÔÓÚÓ¦ÓÃ¿ª·¢À´ËµÈÔÏÔ²»×ã£¬¶øÇÒ IO ¿ª·¢¼¼ÊõÒªÇó·Ç³£¸ß£¬ÐèÒªÕÆÎÕ´óÁ¿µÄÏµÍ³ºÍÏß³ÌµÄÖªÊ¶£¬ÓÐ´óÁ¿µÄ´íÎóºÍÌØÊâÇé¿öÐèÒª´¦Àí¡£¶øÇÒ IO ¹¦ÄÜÍ¨³£ÊÇÕû¸öÏµÍ³µÄ»ù´¡£¬Ò»µ©³ö´íÓ°Ïì½«ÊÇÑÏÖØµÄ¡£ËùÒÔÍ¨³£½¨Òé¿ª·¢ÈËÔ±Ê¹ÓÃ Netty¡¢Mina µÈ IO ¿ò¼ÜÀ´¿ª·¢Ó¦ÓÃ¡£Netty Ïà½Ï Mina À´Ëµ¸ü¶àµØ±»Ê¹ÓÃ£¬Netty ×îÐÂ°æ±¾£¨5.0£©Ä¿Ç°ÊÇ»ùÓÚ NIO Ä£ÐÍµÄ¡£ÔÚ 4.0 µÄÒ»¸öÔçÆÚ°æ±¾ÖÐ Netty ÔøÊ¹ÓÃÁË AIO Ä£ÐÍ£¬µ«ÊÇ·¢ÏÖÈ±µã´óÓÚÓÅµã£¬ËùÒÔÔÚËæºóµÄ°æ±¾ÖÐÓÖÈ¥µôÁË¶Ô AIO µÄÖ§³Ö¡£
- 
-### ÐòÁÐ»¯¼¼Êõ
+### 2.2. ÐòÁÐ»¯¼¼Êõ
 ÐòÁÐ»¯¾ÍÊÇ±à³ÌÓïÑÔÖÐµÄ¶ÔÏóÓë¶þ½øÖÆÊý¾ÝÖ®¼äÏà»¥µÄ×ª»»¡£Ò»¸ö¸ßÐÔÄÜµÄÐòÁÐ»¯¼¼Êõ¶ÔÓÚÒ»¸öºÃµÄÔ¶³Ìµ÷ÓÃ½â¾ö·½°¸À´ËµÊÇ±ØÐëµÄ¡£ÔÚÐòÁÐ»¯·½Ãæ£¬ÓÐÃûµÄ½â¾ö·½°¸°üÀ¨ÓÉ Google ´´½¨µÄ Protocol Buffers¡¢ÓÉ Facebook ´´½¨µÄ¡¢ÏÖÔÚÓÉ Apache ÉçÇøÎ¬»¤µÄ Thrift¡¢±» Hadoop ËùÊ¹ÓÃµÄ Apache Arvo
  
-### ¿ò¼Ü½éÉÜ
+### 2.3. ¿ò¼Ü½éÉÜ
 * Apache Thrift
 Thrift ÊÇÒ»¸ö¸ßÐÔÄÜ¡¢¿çÓïÑÔµÄ RPC ·þÎñ¿ò¼Ü£¬ÊÊºÏÓÃÀ´ÊµÏÖÄÚ²¿·þÎñµÄ RPC µ÷ÓÃ¡£µ«ÊÇ Thrift µÄÐòÁÐ»¯²¿·ÖºÍÕû¸ö¿ò¼Ü½áºÏ½ôÃÜ£¬²¢Ã»ÓÐÖ±½ÓÌá¹©ÐòÁÐ»¯ºÍ·´ÐòÁÐ»¯µÄ½Ó¿Ú£¬ËùÒÔ²»ÈÝÒ×ºÍÆäËü´«ÊäÐ­ÒéÅäºÏÊ¹ÓÃ¡£
  
@@ -63,9 +61,12 @@ Protobuf ÊÇÒ»¸ö¸ßÐÔÄÜÐòÁÐ»¯½â¾ö·½°¸£¬ÓÐÍêÉÆµÄÎÄµµ£¬¿ÉÒÔºÍÀýÈç HTTP ÕâÑùµÄÐ­Òé´îÅ
 * Apache Avro
 Apache Avro ÊÇ Apache Hadoop µÄÒ»¸ö×ÓÏîÄ¿¡£ËüÌá¹©ÁËÁ½ÖÖÐòÁÐ»¯¸ñÊ½£ºJSONºÍ¶þ½øÖÆ¸ñÊ½¡£JSON¸ñÊ½ÓÐÁ¼ºÃµÄ¿É¶ÁÐÔ£¬¶ø¶þ½øÖÆ¸ñÊ½ÔÚÐÔÄÜÉÏºÍ Protobuf ²»ÏàÉÏÏÂ¡£
  
-### ²Î¿¼
+### 2.4. ²Î¿¼
 * [ÐòÁÐ»¯ºÍ·´ÐòÁÐ»¯](http://www.infoq.com/cn/articles/serialization-and-deserialization)
- 
+* [NettyÏµÁÐÖ®Netty¸ßÐÔÄÜÖ®µÀ](http://www.infoq.com/cn/articles/netty-high-performance)
+* [NettyÏµÁÐÖ®NettyÏß³ÌÄ£ÐÍ](http://www.infoq.com/cn/articles/netty-threading-model)
+* [NettyÏµÁÐÖ®Netty²¢·¢±à³Ì·ÖÎö](http://www.infoq.com/cn/articles/netty-concurrent-programming-analysis) 
+
 ## ÏûÏ¢ÖÐ¼ä¼þ
 **¹Ø¼ü×Ö£º**Kafka¡¢RabbitMQ
 ÔÚ·Ö²¼Ê½ÏµÍ³ÖÐ£¬ÏûÏ¢ÖÐ¼ä¼þµÄÖØÒªÐÔÔ½À´Ô½Ã÷ÏÔ¡£ÏûÏ¢ÖÐ¼ä¼þ¿ÉÒÔ½âñîÄ£¿é¡¢Ìá¹©Òì²½µ÷ÓÃ¹¦ÄÜ¡¢ÏûÏ¢³Ö¾Ã»¯¡¢ÏûÏ¢Ï÷·å¡£ÒÑÓÐµÄÈç Apache ActiveMQ ÎÞ·¨Âú×ãÐÂµÄÐèÒª£¬ÓÚÊÇ³öÏÖÁËÈç RabbitMQ¡¢Apache Kafka µÈÐÂÐÍµÄÏûÏ¢ÖÐ¼ä¼þ²úÆ·¡£
